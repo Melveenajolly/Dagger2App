@@ -6,7 +6,7 @@ import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 
-    @Inject
+    @Inject /** Field injection **/
     lateinit var car: Car
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,6 +17,8 @@ class MainActivity : AppCompatActivity() {
          * Car component will be created by generated DaggerCarComponent
          **/
         val carComponent = DaggerCarComponent.create()
+
+        /** carComponent.getCar() - constructor injection */
 
         /** Inject into this will inject all the fields we have at top with inject annotation */
         carComponent.inject(this)

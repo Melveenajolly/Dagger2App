@@ -12,7 +12,7 @@ class Car @Inject constructor(val wheel: Wheel, val engine: Engine) { //Injectin
         Log.d(TAG, "I am driving")
     }
 
-    @Inject
+    @Inject /** Method injection **/
     fun connectRemote(remote: Remote){
         remote.enableRemote(this)
     }
