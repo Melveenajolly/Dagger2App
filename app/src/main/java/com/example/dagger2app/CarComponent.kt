@@ -6,5 +6,7 @@ import dagger.Component
 @Component
 interface CarComponent {
 
-    fun getCar(): Car
+    fun getCar(): Car //getCar requires Constructor Injection
+
+    fun inject(mainActivity: MainActivity)
 }
